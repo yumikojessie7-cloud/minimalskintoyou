@@ -1,0 +1,44 @@
+:root{
+  --bg:#f7f7f7; --fg:#121212; --muted:#6b6b6b;
+  --card:#ffffff; --line:#e8e8e8; --brand:#111; --accent:#0f62fe;
+  --radius:16px; --space:clamp(12px,2vw,24px); --w:1100px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--fg); background:var(--bg); line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--w);margin:0 auto;padding:0 var(--space)}
+.row-between{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.center{text-align:center}
+.small{font-size:14px;color:var(--muted)}
+.mt-8{margin-top:8px}.mt-16{margin-top:16px}
+
+.site-header{position:sticky;top:0;background:rgba(247,247,247,.8);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);z-index:10}
+.logo{font-weight:700;padding:12px 0}
+.nav a{padding:10px 12px;border-radius:10px}
+.nav .btn-sm{border:1px solid var(--line)}
+
+.hero{padding:72px 0}
+.hero-inner{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.hero h1{margin:0;font-size:clamp(26px,4vw,40px);line-height:1.2}
+.sub{color:var(--muted)}
+.note{color:var(--muted);font-size:14px}
+
+.section{padding:56px 0}
+.section.surface{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-title{margin:0 0 20px;font-size:clamp(22px,3vw,28px)}
+
+.grid{display:grid;gap:16px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.works{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card.emphasis{outline:2px solid var(--fg)}
+.list{margin:12px 0 0;padding-left:18px}
+.list li{margin:4px 0}
+
+.work-box{background:#fff;border:1px dashed var(--line);border-radius:var(--radius);padding:24px;min-height:120px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+.btn{display:inline-block;background:var(--fg);color:#fff;padding:12px 18px;border-radius:12px;border:1px solid var(--fg);transition:.15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--fg)}
+
+.site-footer{padding:32px 0;border-top:1px solid var(--line);background:#fff}
